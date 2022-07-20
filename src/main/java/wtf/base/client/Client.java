@@ -3,6 +3,7 @@ package wtf.base.client;
 import me.bush.eventbus.bus.EventBus;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import wtf.base.client.manager.CommandManager;
 import wtf.base.client.manager.ModuleManager;
 import wtf.base.client.manager.RotationManager;
 import wtf.base.client.manager.ScriptManager;
@@ -28,6 +29,7 @@ public class Client {
 
     // below, is all of our managers we will use
     public static ModuleManager moduleManager;
+    public static CommandManager commandManager;
     public static RotationManager rotationManager;
     public static ScriptManager scriptManager;
 
@@ -43,6 +45,7 @@ public class Client {
 
         // create manager instances
         moduleManager = new ModuleManager();
+        commandManager = new CommandManager();
         rotationManager = new RotationManager();
         scriptManager = new ScriptManager();
     }

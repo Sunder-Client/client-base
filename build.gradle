@@ -22,10 +22,6 @@ repositories {
     mavenCentral()
 
     maven {
-        url 'https://libraries.minecraft.net'
-    }
-
-    maven {
         name = "jitpack.io"
         url = "https://jitpack.io"
     }
@@ -37,9 +33,7 @@ configurations {
 }
 
 dependencies {
-    embed "com.mojang:brigadier:1.0.18"
     embed "com.github.therealbush:eventbus:1.0.2"
-
     embed "com.github.litarvan:OpenAuth:1.1.2"
 
     // minecraft will download these automatically, so theres no need to include in the jar
