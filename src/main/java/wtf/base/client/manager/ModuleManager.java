@@ -49,9 +49,20 @@ public class ModuleManager implements ClientImpl {
         add(new ChestStealer());
     }
 
-    protected void add(Module module) {
+    public void add(Module module) {
         moduleMap.put(module.getClass(), module);
         modules.add(module);
+    }
+
+    public void remove(Module module) {
+        if (!module.isToggled()) {
+            module.setToggled(false);
+        }
+
+        Client.BUS.unsubscribe(module);
+
+        moduleMap.remove(module.getClass());
+        modules.remove(module);
     }
 
     @EventListener

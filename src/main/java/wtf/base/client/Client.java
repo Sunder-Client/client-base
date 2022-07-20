@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import wtf.base.client.manager.ModuleManager;
 import wtf.base.client.manager.RotationManager;
+import wtf.base.client.manager.ScriptManager;
 
 public class Client {
 
@@ -28,6 +29,7 @@ public class Client {
     // below, is all of our managers we will use
     public static ModuleManager moduleManager;
     public static RotationManager rotationManager;
+    public static ScriptManager scriptManager;
 
     /**
      * The main method we invoke to start the client
@@ -42,6 +44,7 @@ public class Client {
         // create manager instances
         moduleManager = new ModuleManager();
         rotationManager = new RotationManager();
+        scriptManager = new ScriptManager();
     }
 
     public enum ClientEnvironment {
